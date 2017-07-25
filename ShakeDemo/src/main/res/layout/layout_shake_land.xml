@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/landLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|bottom"
+    android:visibility="invisible">
+
+    <com.fox.shake.view.MarqueeTextView
+        android:id="@+id/tvMarquee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shake_text_bg"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="2dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="94.6dp"
+        android:layout_below="@id/tvMarquee"
+        android:background="@drawable/shake_land2">
+
+        <RelativeLayout
+            android:id="@+id/btn_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/littleTreeView"
+                    android:layout_width="49.6dp"
+                    android:layout_height="49.6dp"
+                    android:src="@drawable/shake_little_tree1" />
+
+                <TextView
+                    android:id="@+id/levelView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/littleTreeView"
+                    android:text="LV.1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/rl1">
+
+                <ImageView
+                    android:id="@+id/ballView"
+                    android:layout_width="12.6dp"
+                    android:layout_height="14.6dp"
+                    android:src="@drawable/shake_progress_ball" />
+
+                <ImageView
+                    android:id="@+id/emptyProgressView"
+                    android:layout_width="53dp"
+                    android:layout_height="14.6dp"
+                    android:layout_toRightOf="@id/ballView"
+                    android:src="@drawable/shake_progress_empty" />
+
+                <ImageView
+                    android:id="@+id/progressView"
+                    android:layout_width="53dp"
+                    android:layout_height="14.6dp"
+                    android:layout_toRightOf="@id/ballView"
+                    android:src="@drawable/shake_progress_full" />
+
+                <TextView
+                    android:id="@+id/percentView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/progressView"
+                    android:layout_centerVertical="true"
+                    android:text="100%"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/shakeLeftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/btn_level"
+            android:src="@drawable/shake_btn_left" />
+
+
+        <ImageView
+            android:id="@+id/shakeRightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/shake_btn_right" />
+
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/shakeRightBtn"
+            android:layout_toRightOf="@id/shakeLeftBtn"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:textSize="9dp"
+                android:text="两天双倍"
+                android:paddingTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/shake_card_bg" android:drawableTop="@drawable/shake_card1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:textSize="9dp"
+                android:text="再摇一次"
+                android:paddingTop="5dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shake_card_bg" android:drawableTop="@drawable/shake_card1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:textSize="9dp"
+                android:text="五天双倍"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/shake_card_bg" android:drawableTop="@drawable/shake_card1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:textSize="9dp"
+                android:text="优惠券"
+                android:paddingTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/shake_card_bg" android:drawableTop="@drawable/shake_card1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shake_bg"
+    tools:context="com.fox.shake.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6.6dp"
+            android:background="@drawable/shadow_top" />
+
+        <ImageView
+            android:id="@+id/ivCloudView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/little_cloud"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/ivCloudView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/little_cloud"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/ivCloudView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/big_cloud"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/ivCloudView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/big_cloud"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="133dp">
+
+            <ImageView
+                android:id="@+id/ivTreeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/shake_new_tree1"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivLeafView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/ivTreeView"
+                android:src="@drawable/shake_leaf2"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivFruitView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="100dp"
+                android:layout_toRightOf="@id/ivTreeView"
+                android:src="@drawable/shake_fruit2"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivSunshine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="37.5dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/shake_sunshine"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBtnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="250dp"
+            android:layout_marginRight="100dp"
+            android:visibility="invisible">
+
+
+            <ImageView
+                android:id="@+id/ivShake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shake_bt" />
+
+            <TextView
+                android:id="@+id/tvRemindTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/ivShake"
+                android:layout_alignTop="@id/ivShake"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/shake_red_circle"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+        <include layout="@layout/layout_shake_land" />
+    </FrameLayout>
+
+</RelativeLayout>
